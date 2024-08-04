@@ -1,13 +1,13 @@
 {% set name = "array_split" %}
-{% set version = "0.5.2" %}
+{% set version = "0.6.5" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: "ee838fdb1354ac4d97bbf380a22bcac5c56193737bd1a3063c7b0e9d6e981450"
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
+  sha256: "267953eb84808a70bba631a5ca1d516cfbb732d6e03ffbf7fa979c4f3ca69673"
 
 build:
   noarch: python
