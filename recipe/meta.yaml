@@ -19,6 +19,7 @@ requirements:
     - python >=3.8
     - pip
     - setuptools
+    - versioneer[toml]
   run:
     - python >=3.8
 
