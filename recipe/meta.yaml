@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
   sha256: "267953eb84808a70bba631a5ca1d516cfbb732d6e03ffbf7fa979c4f3ca69673"
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python {{ 3.8 }}
+    - python {{ python_min }}
     - pip
     - setuptools
     - versioneer
   run:
-    - python >={{ 3.8 }}
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -29,6 +29,7 @@ test:
   requires:
     - setuptools
     - numpy
+    - python {{ python_min }}
 
 about:
   home: https://github.com/array-split/array_split
